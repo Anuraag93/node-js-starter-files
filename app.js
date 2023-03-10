@@ -1,7 +1,10 @@
 const http = require("http");
+const fs = require("fs");
 
 function rqListener(req, res) {
   const url = req.url;
+  const method = req.method;
+
   if (url === "/") {
     res.write("<html>");
     res.write("<head><title>Enter Message</title></head>");
@@ -10,6 +13,25 @@ function rqListener(req, res) {
     );
     res.write("</html>");
     return res.end();
+  }
+  if (url === "/message" && method === "POST") {
+    const body = [];
+    req.on("data", (chunk) => {
+      console.log(chunk);
+      body.push(chunk);
+    });
+    return req.on("end", () => {
+      const parsedBody = Buffer.concat(body).toString();
+      console.log(parsedBody);
+      const message = parsedBody.split("=")[1];
+      fs.writeFile("message.txt", message, (err) => {
+        //handle the error 'err' will be null if no error
+        // res.writeHead(302, { Location: "/" });
+        res.statusCode = 302;
+        res.setHeader("Location", "/");
+        return res.end();
+      });
+    });
   }
 
   res.setHeader("Content-Type", "text/html");
