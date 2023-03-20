@@ -1,6 +1,6 @@
-Go to the project directory and then follow the below given steps:
-
 ## Node js Starter
+
+Go to the project directory and then follow the below given steps:
 
 1. npm --version : for version check
 2. npm init : for initialisation then press enter through the prompts to get a default initialisation
