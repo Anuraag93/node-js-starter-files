@@ -14,3 +14,13 @@ Go to the project directory and then follow the below given steps:
 4. Execute the url `localhost:3000/api/posts/` by adding **Headers**
 5. _Key_ as `Authorization` and _Value_ as `Bearer<space><copied auth token>`
 6. Once you run this you will get the encriped info in the jwt token
+
+### Using MySQL
+
+1. Install XAMPP and run the Apache and MySQL servers
+2. Go to the application and click `phpMyAdmin` on the `localhost/dashboard`
+3. Click on the _nodemysql_ (name of my database) to see and explore the CRUD changes to the database.
+   C - Create
+   R - Read
+   U - Update
+   D - Delete
