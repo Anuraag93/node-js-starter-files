@@ -24,3 +24,19 @@ Go to the project directory and then follow the below given steps:
    R - Read
    U - Update
    D - Delete
+
+### Connecting to Mongodb
+
+1. Take the free community version mongo db subscription.
+2. In mongodb website create a project -> create a shared cluster.
+3. Create a user to enable the database access -> copy the password because it will be usefull later on for you node js code.
+4. After your cluster is created click on connect for the particular cluster to connect to your application or vscode.
+5. To connect to your application select the driver and version (Node.js and 4.1 or later) and then copy the connection string and replace the <password> with the above copied password.
+6. This connection string can be used as a URI in .env to connect to your mongodb database.
+
+### backend project creation and structure
+
+1. Use `npm init -y` to initalise the backend project
+2. Install the required packages using this command `npm i express mongoose nodemon dotenv express-async-handler`.
+3. Under `package.json` add `"dev": "nodemon server.js"` to _"scripts_
+4. Use `npm run dev` command to run nodemon which automatically refreshes the server every time a file is saved.
