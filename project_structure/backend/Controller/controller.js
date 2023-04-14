@@ -31,6 +31,15 @@ const postNews = expressHander(async (req, res) => {
   }
 });
 
+const postOne = expressHander(async (req, res) => {
+  const { email, password } = req.body;
+  const news = await News.findOne({ email: email, password: password });
+  if (!news) {
+    res.status(400).json({ "not found": "User not found" });
+  }
+  res.status(200).json(news);
+});
+
 const updateNews = expressHander(async (req, res) => {
   try {
     const news = await News.findByIdAndUpdate(
@@ -59,4 +68,4 @@ const deleteNews = expressHander(async (req, res) => {
   }
 });
 
-module.exports = { getNews, postNews, updateNews, deleteNews };
+module.exports = { getNews, postNews, postOne, updateNews, deleteNews };

@@ -40,3 +40,9 @@ Go to the project directory and then follow the below given steps:
 2. Install the required packages using this command `npm i express mongoose nodemon dotenv express-async-handler`.
 3. Under `package.json` add `"dev": "nodemon server.js"` to _"scripts_
 4. Use `npm run dev` command to run nodemon which automatically refreshes the server every time a file is saved.
+
+### Interaction between frontend and backend code
+
+if you are getting axios Network error while using post then add `app.use(cors());` in the server side code and it will work as expected
+
+1.
