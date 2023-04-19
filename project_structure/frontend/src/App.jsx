@@ -3,6 +3,9 @@ import { NavBar } from "./components/NavBar";
 import { Home } from "./components/Home";
 import { Signup } from "./components/Signup";
 import { Login } from "./components/Login";
+import { Update } from "./components/Update";
+
+import "./App.css";
 
 function App() {
   return (
@@ -15,6 +18,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/update/:id" element={<Update />} />
       </Routes>
     </BrowserRouter>
   );
