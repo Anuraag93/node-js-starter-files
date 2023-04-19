@@ -34,15 +34,24 @@ Go to the project directory and then follow the below given steps:
 5. To connect to your application select the driver and version (Node.js and 4.1 or later) and then copy the connection string and replace the <password> with the above copied password.
 6. This connection string can be used as a URI in .env to connect to your mongodb database.
 
-### backend project creation and structure
+### Backend project creation and structure
 
 1. Use `npm init -y` to initalise the backend project
 2. Install the required packages using this command `npm i express mongoose nodemon dotenv express-async-handler`.
 3. Under `package.json` add `"dev": "nodemon server.js"` to _"scripts_
 4. Use `npm run dev` command to run nodemon which automatically refreshes the server every time a file is saved.
 
-### Interaction between frontend and backend code
+### Frontend Project creation and structure
 
-if you are getting axios Network error while using post then add `app.use(cors());` in the server side code and it will work as expected
+1. `npm create vite@latest .` setup up the project framework then select `React` and `javascript` in the options.
+2. Now install the necessary modules `npm i axios react-router-dom` 
+3. Go to the backend folder to start the server using `npm run dev`.
+4. Include the **bootstrap** *link* and *script* links from the website in the `index.html` file to use bootstrap navigation bar.
+5. Now run `npm run dev` on the frontend folder to see your changes on the browser.
 
-1.
+### Interaction between frontend and backend code pointers
+
+If you are getting axios Network error while using post then add `app.use(cors());` in the server side code and it will work as expected
+
+
+<img width=500 src="https://user-images.githubusercontent.com/21260609/232944392-5c3936a2-8431-4ebd-bea8-5506bc1f9481.png"/> <img width=500 src="https://user-images.githubusercontent.com/21260609/232944402-ece1de7c-afbe-4f7d-9574-70a6b0b36284.png"/> <img width=500 src="https://user-images.githubusercontent.com/21260609/232944398-63f04ee8-616d-4750-8810-162dd8fb916b.png"/>
